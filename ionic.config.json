@@ -1,0 +1,8 @@
+{
+  "name": "MiEstacionamiento",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "b7eeef20"
+}
