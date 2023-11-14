@@ -6,13 +6,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public appPages = [
-    { title: 'Mapa', url: '#', icon: 'map' },
-    { title: 'Arriendos', url: '#', icon: 'layers' },
-    { title: 'Vehiculos', url: '#', icon: 'car' },
-    { title: 'Estacionamientos', url: '#', icon: 'stop' },
-    { title: 'Ajustes', url: '#', icon: 'settings' },
-    { title: 'Ayuda', url: '#', icon: 'help-circle' },
-    { title: 'Contáctanos', url: '#', icon: 'mail' }
+    { title: 'Mapa', url: '/mapa', icon: 'map' },
+    { title: 'Arriendos', url: '/arriendos', icon: 'layers' },
+    { title: 'Vehículos', url: '/vehiculos', icon: 'car' },
+    { title: 'Estacionamientos', url: '/estacionamientos', icon: 'stop' },
+    { title: 'Ajustes', url: '/ajustes', icon: 'settings' },
+    { title: 'Ayuda', url: '/ayuda', icon: 'help-circle' },
+    { title: 'Contáctanos', url: 'contactanos', icon: 'mail' }
   ];
   nombre = "Diego";
   apellido = "Sanchez";
