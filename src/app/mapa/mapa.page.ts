@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MapaPage implements OnInit {
 
+  ancho = screen.width;
+
   constructor() { }
 
   ngOnInit() {
