@@ -76,7 +76,7 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   /*
    * Dark Colors
    * -------------------------------------------
@@ -241,4 +241,8 @@ html {
    * https://ionicframework.com/docs/layout/dynamic-font-scaling
    */
   --ion-dynamic-font: var(--ion-default-dynamic-font);
+}
+
+.boton{
+  text-decoration: none;
 }

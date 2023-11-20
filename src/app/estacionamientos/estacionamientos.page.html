@@ -1,14 +1,20 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar color="light">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Estacionamientos</ion-title>
-    
-  <ion-button (click)="getEsta()">Estacionamientos</ion-button>
+    <ion-title>Tus Estacionamientos</ion-title>
   </ion-toolbar>
 </ion-header>
-<h1>hola</h1>
-<ion-content [fullscreen]="true">
 
+<ion-content [fullscreen]="true" color="light">
+
+  <ion-card  *ngFor="let estacionamiento of estacionamientos">
+    <ion-card-content>
+        <b>Estacionamiento {{estacionamiento.id_est}}</b><br>   
+        Ubicación: {{estacionamiento.nombre_dic}}<br>
+        Valor Hora: ${{estacionamiento.tarifa}}
+    </ion-card-content>
+  </ion-card> 
+  
 </ion-content>

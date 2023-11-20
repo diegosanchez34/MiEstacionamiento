@@ -3,10 +3,20 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title>Arriendos</ion-title>
+    <ion-title>Registro de Arriendos</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-
+<ion-content [fullscreen]="true" color="light" >
+  <ion-list  [inset]="true">
+    <ion-item *ngFor="let arriendo of arriendos">
+        <ion-label>
+          <b>Arriendo  {{arriendo.id_arr}}</b><br>   
+          Hora de Inicio: {{arriendo.hora_inic}}<br>
+          Hora de Salida: {{arriendo.hora_fin}}<br>
+          Patente Vehiculo: {{arriendo.patente}}<br>
+          Estacionamiento: {{arriendo.id_est}}<br>
+        </ion-label>      
+    </ion-item>
+</ion-list>
 </ion-content>

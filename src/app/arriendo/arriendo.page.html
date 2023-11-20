@@ -1,0 +1,25 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="light">
+    <ion-buttons>
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Arriendo Estacionamiento</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" color="light" class="ion-padding">
+  
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Estacionamiento {{estacionamiento.id_est}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Ubicación: {{estacionamiento.nombre_dic}}<br>
+      Dueño: {{estacionamiento.nombre}}  {{estacionamiento.ap_paterno}}<br>
+      Valor Hora: ${{estacionamiento.tarifa}}
+    </ion-card-content>
+  </ion-card>  
+
+  <ion-button href="/mapa" expand="block">Arrendar</ion-button>  
+
+</ion-content>

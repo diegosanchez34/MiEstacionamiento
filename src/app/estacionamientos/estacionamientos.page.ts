@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/Http';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-estacionamientos',
@@ -7,12 +7,17 @@ import { HttpClient } from '@angular/common/Http';
   styleUrls: ['./estacionamientos.page.scss'],
 })
 export class EstacionamientosPage implements OnInit {
-  constructor(private http: HttpClient) { }
+
+  estacionamientos:any = [];
+  apiURL = 'http://localhost/estacionamiento_getEstacionamientos.php';
+
+  constructor(private http: HttpClient) {
+    this.http.get(this.apiURL).subscribe((respuesta:any)=>{
+      this.estacionamientos = respuesta;
+    });
+   }
 
   ngOnInit() {
-  }
-  getEsta(){
-    console.log("working...");
   }
 
 
