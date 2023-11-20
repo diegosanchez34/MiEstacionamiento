@@ -7,6 +7,73 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-
+<ion-content [fullscreen]="true" class="ion-padding">
+  <h2>¡Bienvenido a la sección de ayuda de <b>Arriendo mi Estacionamiento</b>!</h2>
+  <p>Aquí encontrarás información valiosa para aprovechar al máximo nuestra aplicación. Si tienes alguna pregunta o necesitas asistencia, ¡estamos aquí para ayudarte!</p>
+  
+  <h2>Guía de uso</h2>
+  <h5>Búsqueda de Estacionamientos:</h5>
+  <ol>
+    <li>Entra a la sección de mapa de estacionamientos.</li>
+    <li>En la parte superior encontraras un mapa donde se pueden visualizar los estacionamientos disponibles cerca de ti.</li>
+    <li>Luego tendrás un listado con estos estacionamientos en la parte de abajo.</li>
+    <li>Desplázate por el listado y luego elije el estacionamiento que quieras arrenda.</li>
+  </ol>
+  <h5>Arrendar estacionamiento:</h5>
+  <ol>
+    <li>Después de seleccionar el estacionamiento que deseas arrendar se abrirá la ventana de arriendo.</li>
+    <li>Verifica los detalles del estacionamiento y la tarifa por hora.</li>
+    <li>Ingresa tu hora de entrada y seguido a esto elije tu hora de salida.</li>
+    <li>Confirma el arriendo.</li>
+  </ol>
+  <h5>Agregar un nuevo vehículo:</h5>
+  <ol>
+    <li>Ingresa a la sección de vehículos.</li>
+    <li>Veras todos los vehículos vinculados con tu cuenta.</li>
+    <li>Al final encontraras un botón que dice <b>Agregar un vehículo</b>.</li>
+    <li>Se abrirá una ventana nueva donde podrás ingresar todos los datos del vehículo.</li>
+    <li>Toca el botón de <b>Agregar</b> para completar la operación.</li>
+  </ol>
+  <h5>Agregar un nuevo estacionamiento:</h5>
+  <ol>
+    <li>Ingresa a la sección de estacionamientos.</li>
+    <li>Veras todos los estacionamientos vinculados con tu cuenta.</li>
+    <li>Al final encontraras un botón que dice <b>Agregar un estacionamiento</b>.</li>
+    <li>Se abrirá una ventana nueva donde podrás ingresar todos los datos del estacionamiento.</li>
+    <li>Toca el botón de <b>Agregar</b> para completar la operación.</li>
+  </ol>
+  
+  <h2>Preguntas Frecuentes (FAQ)</h2>
+  <ion-accordion-group>
+    <ion-accordion value="1">
+      <ion-item slot="header" color="light">
+        <ion-label>¿Puedo usar mi cuenta en varios dispositivos?</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Sí, puedes acceder a tu cuenta desde múltiples dispositivos.</div>
+    </ion-accordion>
+    <ion-accordion value="2">
+      <ion-item slot="header" color="light">
+        <ion-label>¿Cómo se calcula el costo del arrendamiento?</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">El costo se basa en el tiempo que utilizas el estacionamiento y la tarifa establecida por el propietario</div>
+    </ion-accordion>
+    <ion-accordion value="3">
+      <ion-item slot="header" color="light">
+        <ion-label>¿Qué métodos de pago aceptan?</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Aceptamos pagos con tarjetas de crédito.</div>
+    </ion-accordion>
+    <ion-accordion value="4">
+      <ion-item slot="header" color="light">
+        <ion-label>¿Cómo cambio la información de mi tarjeta de crédito?</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Puedes actualizar la información de tu tarjeta en la sección "Perfil" de la aplicación.</div>
+    </ion-accordion>
+    <ion-accordion value="5">
+      <ion-item slot="header" color="light">
+        <ion-label>¿Qué hago si olvidé mi contraseña?</ion-label>
+      </ion-item>
+      <div class="ion-padding" slot="content">Puedes cambiar tu contraseña desde la sección de ajustes en el menú lateral. Si no tienes acceso a tu cuenta ve a la pantalla de inicio de sesión y selecciona "¿Olvidaste tu contraseña?" para restablecerla.</div>
+    </ion-accordion>
+  </ion-accordion-group>
 </ion-content>

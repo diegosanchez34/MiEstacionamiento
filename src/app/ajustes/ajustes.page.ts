@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ThemeSwitcherService } from 'src/app/theme-switcher.service';
 
 @Component({
   selector: 'app-ajustes',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AjustesPage implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router,private themeSwitcher: ThemeSwitcherService) { }
 
   ngOnInit() {
+
+
+  }
+
+  async irCambiar() {
+    this.router.navigate(['/cambiar']);
+  }
+
+  toggleDarkMode() {
+    this.themeSwitcher.toggleDarkMode();
   }
 
 }

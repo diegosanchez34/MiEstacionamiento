@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-arriendo',
@@ -11,7 +10,7 @@ export class ArriendoPage implements OnInit {
   cadena: string | null = localStorage.getItem("est");
   estacionamiento:any;
 
-  constructor(private router: Router) { 
+  constructor() { 
     if (this.cadena !== null) {
       // Convertir la cadena JSON a un objeto
       this.estacionamiento = JSON.parse(this.cadena);
@@ -21,10 +20,6 @@ export class ArriendoPage implements OnInit {
   }
 
     ngOnInit() {
-  }
-
-  arrendar(){
-    this.router.navigate(['/mapa']);
   }
 
 }

@@ -41,6 +41,10 @@ const routes: Routes = [
   {
     path: 'arriendo',
     loadChildren: () => import('./arriendo/arriendo.module').then( m => m.ArriendoPageModule)
+  },
+  {
+    path: 'cambiar',
+    loadChildren: () => import('./cambiar/cambiar.module').then( m => m.CambiarPageModule)
   }
 
 
