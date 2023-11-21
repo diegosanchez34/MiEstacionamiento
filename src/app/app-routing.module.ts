@@ -45,6 +45,18 @@ const routes: Routes = [
   {
     path: 'cambiar',
     loadChildren: () => import('./cambiar/cambiar.module').then( m => m.CambiarPageModule)
+  },
+  {
+    path: 'inicio',
+    loadChildren: () => import('./inicio/inicio.module').then( m => m.InicioPageModule)
+  },
+  {
+    path: 'seleccionar',
+    loadChildren: () => import('./seleccionar/seleccionar.module').then( m => m.SeleccionarPageModule)
+  },
+  {
+    path: 'horario',
+    loadChildren: () => import('./horario/horario.module').then( m => m.HorarioPageModule)
   }
 
 

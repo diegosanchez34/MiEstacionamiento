@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class MapaPage implements OnInit {
 
   ancho = screen.width;
+  vehiculos:any = [];
   estacionamientos:any = [];
   apiURL = 'http://localhost/estacionamiento_getEstacionamientos.php';
 
@@ -17,6 +18,9 @@ export class MapaPage implements OnInit {
     this.http.get(this.apiURL).subscribe((respuesta:any)=>{
       this.estacionamientos = respuesta;
     });
+    localStorage.setItem("i", 'no seleccionado');
+    localStorage.setItem("hora", 'no seleccionado');
+    localStorage.removeItem('vehi');
    }
 
   ngOnInit() {

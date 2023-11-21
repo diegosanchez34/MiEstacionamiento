@@ -1,5 +1,5 @@
 <ion-header [translucent]="true">
-  <ion-toolbar color="light">
+  <ion-toolbar>
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
@@ -10,11 +10,15 @@
 <ion-content [fullscreen]="true" color="light">
 
   <ion-card  *ngFor="let estacionamiento of estacionamientos">
-    <ion-card-content>
-        <b>Estacionamiento {{estacionamiento.id_est}}</b><br>   
+    <ion-card-header>
+      <ion-card-title class="titulo">Estacionamiento {{estacionamiento.id_est}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content> 
         Ubicación: {{estacionamiento.nombre_dic}}<br>
         Valor Hora: ${{estacionamiento.tarifa}}
     </ion-card-content>
   </ion-card> 
+
+  <ion-button href="/estacionamientos" expand="block" class="ion-padding">Agregar un estacionamiento</ion-button> 
   
 </ion-content>

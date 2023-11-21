@@ -1,24 +1,59 @@
 <ion-header [translucent]="true">
   <ion-toolbar color="light">
-    <ion-buttons>
+    <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Arriendo Estacionamiento</ion-title>
+    <ion-title>Datos de arriendo</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true" color="light" class="ion-padding">
-  
+
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Estacionamiento {{estacionamiento.id_est}}</ion-card-title>
+      <ion-card-title class="texto">Estacionamiento {{estacionamiento.id_est}}</ion-card-title>
     </ion-card-header>
-    <ion-card-content>
+    <ion-card-content>  
       Ubicación: {{estacionamiento.nombre_dic}}<br>
       Dueño: {{estacionamiento.nombre}}  {{estacionamiento.ap_paterno}}<br>
       Valor Hora: ${{estacionamiento.tarifa}}
     </ion-card-content>
   </ion-card>  
+
+  <ion-card>
+    <ion-card-header >
+      <ion-card-title class="texto" id="vehiculoCard">Vehículo {{index}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content >
+      Modelo:  {{vehiculo.marca}} {{vehiculo.modelo}}<br>   
+      Color: {{vehiculo.color}}<br>
+      Patente: {{vehiculo.patente}}<br>
+    </ion-card-content>
+  </ion-card>    
+
+  <ion-card>
+    <ion-card-header >
+      <ion-card-title class="texto" id="vehiculoCard">Horario {{horario}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content >
+      Desde: {{inicio}}<br>
+      Hasta: {{fin}}<br>
+    </ion-card-content>
+  </ion-card> 
+
+  <ion-list [inset]="true">
+    <ion-item [button]="true" (click)="SelecVehiculo()">
+      <ion-icon slot="start" name="car"></ion-icon>
+      <ion-label>Seleccionar vehículo</ion-label>
+    </ion-item>    
+  </ion-list>
+
+  <ion-list [inset]="true">
+    <ion-item [button]="true" (click)="SelecHora()">
+      <ion-icon slot="start" name="time"></ion-icon>
+      <ion-label>Selecionar hora de arriendo </ion-label>
+    </ion-item>    
+  </ion-list>
 
   <ion-button href="/mapa" expand="block">Arrendar</ion-button>  
 
