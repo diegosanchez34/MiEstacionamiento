@@ -7,6 +7,23 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true" color="light" class="ion-padding">
+  
+    <ion-list-header class="">¿Tienes preguntas o comentarios? Cuéntanos.</ion-list-header>
+    <ion-list [inset]="true">
+      <ion-item>
+        <ion-input label="Tu Nombre" labelPlacement="floating" placeholder=""></ion-input>
+        <ion-icon slot="end" name="person"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-input label="Tu Correo Electrónico" labelPlacement="floating" placeholder=""></ion-input>
+        <ion-icon slot="end" name="mail"></ion-icon>
+      </ion-item>
+      <ion-item>
+        <ion-textarea [autoGrow]="true" label="Mensaje" labelPlacement="floating" placeholder=""></ion-textarea>
+      </ion-item>
+    </ion-list> 
+
+    <ion-button (click)="enviar()" expand="block">Enviar Mensaje</ion-button>  
 
 </ion-content>

@@ -8,8 +8,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" color="light">
-
-  <ion-card  *ngFor="let vehiculo of vehiculos">
+  <ion-card *ngFor="let vehiculo of vehiculos; let i = index" [ngClass]="{ 'seleccionada': i === selectedCard }" (click)="seleccionarCarta(i)">
     <ion-card-content>
       Vehiculo:  {{vehiculo.marca}} {{vehiculo.modelo}}<br>   
       Color: {{vehiculo.color}}<br>
