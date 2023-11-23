@@ -1,7 +1,5 @@
 import { Component, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
-import { Location } from '@angular/common';
-import { IonDatetime } from '@ionic/angular';
 
 @Component({
   selector: 'app-arriendo',
@@ -20,7 +18,7 @@ export class ArriendoPage implements OnInit {
   inicio:any;
   fin:any;
 
-  constructor(private router: Router,private location: Location) { 
+  constructor(private router: Router) { 
 
     if (this.cadena_est !== null) {
       // Convertir la cadena JSON a un objeto

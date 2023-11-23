@@ -1,13 +1,24 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button text="Volver"></ion-back-button>
     </ion-buttons>
     <ion-title>Elige un Horario</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+<ion-content [fullscreen]="true"  class="ion-padding">
+  <ion-list [inset]="true">
 
+    <ion-item>
+      <ion-label>Desde</ion-label>
+      <ion-datetime [presentation]="month"></ion-datetime>
+    </ion-item>
+
+   
+
+  </ion-list>
+  <br>
+  <ion-button (click)="confirmar()" expand="block">Confirmar horario de arriendo</ion-button> 
 
 </ion-content>

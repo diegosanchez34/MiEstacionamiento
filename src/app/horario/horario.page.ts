@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NavController } from '@ionic/angular';
 @Component({
   selector: 'app-horario',
   templateUrl: './horario.page.html',
@@ -7,9 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HorarioPage implements OnInit {
 
-  constructor() { }
+  inicio:Date = new Date;
+  fin:Date = new Date;
+
+  constructor(private navCtrl: NavController) { }
 
   ngOnInit() {
+  }
+
+  confirmar(){
+    console.log(this.inicio);
+    this.navCtrl.back();
   }
 
 }
