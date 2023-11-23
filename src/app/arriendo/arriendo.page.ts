@@ -10,13 +10,14 @@ export class ArriendoPage implements OnInit {
 
   cadena_est: string | null = localStorage.getItem("est");
   cadena_vehi: string | null = localStorage.getItem("vehi");
+  cadena_ini: string | null = localStorage.getItem("ini");
+  cadena_fin: string | null = localStorage.getItem("fin");
   index:any = localStorage.getItem("i");
   horario:any = localStorage.getItem("hora");
   
   estacionamiento:any;
   vehiculo:any;
-  inicio:any;
-  fin:any;
+
 
   constructor(private router: Router) { 
 
@@ -41,6 +42,7 @@ export class ArriendoPage implements OnInit {
   ionViewWillEnter() {
     const cadena_vehi: string | null = localStorage.getItem("vehi");
     this.index = localStorage.getItem("i");
+    this.horario = localStorage.getItem("hora");
 
     if (cadena_vehi !== null) {
       // Convertir la cadena JSON a un objeto
@@ -48,6 +50,9 @@ export class ArriendoPage implements OnInit {
     } else {
       this.vehiculo = " ";
     }
+
+    this.cadena_ini = localStorage.getItem("ini");
+    this.cadena_fin = localStorage.getItem("fin");
   }
 
   SelecVehiculo( ){

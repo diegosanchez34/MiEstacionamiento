@@ -21,6 +21,8 @@ export class MapaPage implements OnInit {
     localStorage.setItem("i", 'no seleccionado');
     localStorage.setItem("hora", 'no seleccionado');
     localStorage.removeItem('vehi');
+    localStorage.removeItem('ini');
+    localStorage.removeItem('fin');
    }
 
   ngOnInit() {

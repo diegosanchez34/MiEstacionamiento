@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { IonDatetime, NavController } from '@ionic/angular';
+import { format, parseISO } from 'date-fns';
 @Component({
   selector: 'app-horario',
   templateUrl: './horario.page.html',
@@ -7,17 +8,33 @@ import { NavController } from '@ionic/angular';
 })
 export class HorarioPage implements OnInit {
 
-  inicio:Date = new Date;
-  fin:Date = new Date;
+  inicio: Date = new Date();
+  fin: Date = new Date();
 
-  constructor(private navCtrl: NavController) { }
+  cadenaIni: any;
+  cadenaFin: any;
+
+  constructor(private navCtrl: NavController) { 
+
+  }
 
   ngOnInit() {
   }
 
-  confirmar(){
-    console.log(this.inicio);
-    this.navCtrl.back();
+  cambiarFechaInicio(value: any){
+    this.inicio = value; 
   }
 
+  cambiarFechaFin(value: any){
+    this.fin = value; 
+  }
+
+  confirmar(){
+    this.cadenaIni = this.inicio;
+    this.cadenaFin = this.fin;
+    localStorage.setItem("ini", this.cadenaIni); 
+    localStorage.setItem("fin", this.cadenaFin); 
+    localStorage.setItem("hora", "de Arriendo");  
+    this.navCtrl.back(); 
+  }
 }
