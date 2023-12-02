@@ -9,6 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class ArriendosPage implements OnInit {
 
   arriendos:any = [];
+
   apiURL = 'http://localhost/estacionamiento_getArriendos.php';
 
   constructor(private http: HttpClient) {

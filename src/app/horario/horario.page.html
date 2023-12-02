@@ -12,22 +12,22 @@
 
     <ion-item>
       <ion-label>Desde</ion-label>
-      <ion-datetime-button datetime="fechaInicio" ></ion-datetime-button>
+      <ion-datetime-button datetime="desde" ></ion-datetime-button>
     
       <ion-modal [keepContentsMounted]="true">
         <ng-template>
-          <ion-datetime #desde id="fechaInicio" presentation="date-time" [preferWheel]="true" (ionChange)=cambiarFechaInicio(desde.value)></ion-datetime> 
+          <ion-datetime id="desde" presentation="date-time" [preferWheel]="true" [(ngModel)]="inicio"></ion-datetime> 
         </ng-template>
       </ion-modal>
     </ion-item>
       
     <ion-item>
       <ion-label>Hasta</ion-label>
-      <ion-datetime-button datetime="fechaFin" ></ion-datetime-button>
+      <ion-datetime-button datetime="hasta" ></ion-datetime-button>
     
       <ion-modal [keepContentsMounted]="true">
         <ng-template>
-          <ion-datetime #hasta id="fechaFin" presentation="date-time" [preferWheel]="true" (ionChange)=cambiarFechaFin(hasta.value)></ion-datetime> 
+          <ion-datetime id="hasta" presentation="date-time" [preferWheel]="true" [(ngModel)]="fin"></ion-datetime> 
         </ng-template>
       </ion-modal>
     </ion-item>

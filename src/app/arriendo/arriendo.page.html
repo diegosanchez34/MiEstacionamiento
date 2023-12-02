@@ -36,8 +36,8 @@
       <ion-card-title class="texto" id="vehiculoCard">Horario {{horario}}</ion-card-title>
     </ion-card-header>
     <ion-card-content >
-      Desde: {{cadena_ini}}<br>
-      Hasta: {{cadena_ini}}<br>
+      Desde: {{desde}}<br>
+      Hasta: {{hasta}}<br>
     </ion-card-content>
   </ion-card> 
 
@@ -55,6 +55,5 @@
     </ion-item>    
   </ion-list>
 
-  <ion-button href="/mapa" expand="block">Arrendar</ion-button>  
-
+  <ion-button (click)="arrendar()" expand="block" id="arrendar">Arrendar</ion-button>  
 </ion-content>

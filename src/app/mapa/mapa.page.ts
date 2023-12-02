@@ -23,6 +23,8 @@ export class MapaPage implements OnInit {
     localStorage.removeItem('vehi');
     localStorage.removeItem('ini');
     localStorage.removeItem('fin');
+    localStorage.removeItem('desde');
+    localStorage.removeItem('hasta');
    }
 
   ngOnInit() {

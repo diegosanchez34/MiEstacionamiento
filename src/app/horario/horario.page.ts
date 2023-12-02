@@ -8,32 +8,27 @@ import { format, parseISO } from 'date-fns';
 })
 export class HorarioPage implements OnInit {
 
-  inicio: Date = new Date();
-  fin: Date = new Date();
+  inicio = new Date().toISOString();
+  fin = new Date().toISOString();
 
   cadenaIni: any;
   cadenaFin: any;
 
   constructor(private navCtrl: NavController) { 
-
   }
 
   ngOnInit() {
   }
 
-  cambiarFechaInicio(value: any){
-    this.inicio = value; 
-  }
-
-  cambiarFechaFin(value: any){
-    this.fin = value; 
-  }
-
   confirmar(){
-    this.cadenaIni = this.inicio;
-    this.cadenaFin = this.fin;
+    this.cadenaIni = format(parseISO(this.inicio),'yyyy-MM-dd HH:mm:ss');
     localStorage.setItem("ini", this.cadenaIni); 
+    this.cadenaFin = format(parseISO(this.fin),'yyyy-MM-dd HH:mm:ss');
     localStorage.setItem("fin", this.cadenaFin); 
+    this.cadenaIni = format(parseISO(this.inicio),'HH:mm, dd MMM yyyy');
+    localStorage.setItem("desde", this.cadenaIni); 
+    this.cadenaFin = format(parseISO(this.fin),'HH:mm, dd MMM yyyy');
+    localStorage.setItem("hasta", this.cadenaFin); 
     localStorage.setItem("hora", "de Arriendo");  
     this.navCtrl.back(); 
   }
