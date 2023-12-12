@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Inicio de Sesión</ion-title>
+  </ion-toolbar>
+</ion-header>
+  
+<ion-content [fullscreen]="true" class="ion-padding"  color="light">
+  <div class="center-content">
+    <img width="70%" src="assets/img/Mi Estacionamiento.png" style="padding-top: 20px; padding-bottom: 20px;">
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="ingresar()" (keypress.enter)="ingresar()">
+    <ion-list  [inset]="true">
+      <ion-item>
+        <ion-icon slot="start" name="mail-outline" color="primary"></ion-icon>
+        <ion-input type="text" placeholder="Ingresa tu correo" formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-icon slot="start" name="lock-closed-outline" color="primary"></ion-icon>
+        <ion-input type="{{tipo}}" placeholder="Ingresa tu contraseña" formControlName="password"></ion-input>
+        <ion-button (click)="ojito()" slot="end" shape="round" fill="clear">
+          <ion-icon slot="icon-only" [name]="hide ? 'eye-outline' : 'eye-off-outline'" color="medium"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+
+    <ion-button expand="block" type="submit" style="padding-top: 20px; padding-bottom: 13px;">Ingresar
+      <ion-icon slot="end" name="log-in-outline"></ion-icon>
+    </ion-button>
+  </form> 
+  
+</ion-content>
