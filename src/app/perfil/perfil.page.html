@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="isCliente()">Perfil Cliente</ion-title>
+    <ion-title *ngIf="isDueno()">Perfil Dueño</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding"  color="light">
+  <ion-list [inset]="true">
+    <ion-item>
+      <ion-label>Nombres:</ion-label>
+      <p class="center-text">{{user.nombre}} {{user.s_nombre}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label>Apellidos:</ion-label>
+      <p class="center-text">{{user.ap_paterno}} {{user.ap_materno}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label>RUT:</ion-label>
+      <p class="center-text" *ngIf="isCliente()">{{user.run_cli}}-{{user.dv_run}}</p>
+      <p class="center-text" *ngIf="isDueno()">{{user.run_due}}-{{user.dv_run}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label>Fecha Nacimiento:</ion-label>
+      <p class="center-text">{{user.fec_nac}}</p>
+    </ion-item>
+    <ion-item>
+      <ion-label>Correo:</ion-label>
+      <p class="center-text">{{user.correo}}</p>
+    </ion-item>
+  </ion-list>
+</ion-content>
