@@ -16,5 +16,7 @@ Componentes cruciales
 -MySql
 
 
+moni
+
 
 
