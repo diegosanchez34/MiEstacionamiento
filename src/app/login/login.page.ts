@@ -32,7 +32,6 @@ export class LoginPage implements OnInit {
   }
 
   ngOnInit() {
-    localStorage.setItem('usuario',' ')
   }
 
   ojito(){

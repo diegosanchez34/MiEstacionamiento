@@ -32,12 +32,16 @@ export class ArriendoPage implements OnInit {
     hora_fin: string | null,
     patente: string | null,
     id_est: string | null,
+    run_cli: string | null,
+    run_due: string | null
   } = {
     id_arr: "",
     hora_inic: "",
     hora_fin: "",
     patente: "", 
-    id_est: ""
+    id_est: "",
+    run_cli: "",
+    run_due: ""
   }
   alertController: any;
 
@@ -96,8 +100,10 @@ export class ArriendoPage implements OnInit {
       this.arriendo.id_arr = this.ultimo;
       this.arriendo.patente = this.vehiculo.patente;
       this.arriendo.id_est = this.estacionamiento.id_est;  
+      this.arriendo.run_cli = this.vehiculo.run_cli;
+      this.arriendo.run_due = this.estacionamiento.run_due;
       this.arriendo.hora_inic = localStorage.getItem("ini");
-      this.arriendo.hora_fin = localStorage.getItem("fin");
+      this.arriendo.hora_fin = localStorage.getItem("fin");      
       axios.post('http://localhost/estacionamiento_insertArriendo.php',this.arriendo)
       .then((respuesta)=>{
         console.log(respuesta);

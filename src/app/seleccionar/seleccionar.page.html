@@ -8,7 +8,7 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-card *ngFor="let vehiculo of vehiculos; let i = index" [ngClass]="{ 'seleccionada': i === selectedCard }" (click)="seleccionar(i,vehiculo)">
+  <ion-card *ngFor="let vehiculo of vehi; let i = index" [ngClass]="{ 'seleccionada': i === selectedCard }" (click)="seleccionar(i,vehiculo)">
     <ion-card-header>
       <ion-card-title class="titulo">Vehículo {{i+1}}</ion-card-title>
     </ion-card-header>
@@ -18,5 +18,7 @@
       Patente: {{vehiculo.patente}}<br>
     </ion-card-content>
   </ion-card> 
+
+  <ion-note *ngIf="NotFound" style="display: flex; justify-content: center; align-items: center; padding: 20px;">No posee un vehiculo en esta cuenta.</ion-note>
 
 </ion-content>

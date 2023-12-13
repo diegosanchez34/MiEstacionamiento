@@ -32,8 +32,7 @@ export class EstacionamientosPage implements OnInit {
     }); 
    }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 
 }

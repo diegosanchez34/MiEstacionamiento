@@ -7,9 +7,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="light"  class="ion-padding">
+<ion-content [fullscreen]="true" color="light">
+  <ion-note *ngIf="NotFound" class="center-text">No se han realizado arriendos en esta cuenta.</ion-note>
   <ion-list  [inset]="true">
-    <ion-item *ngFor="let arriendo of arriendos">
+    <ion-item *ngFor="let arriendo of arri">
         <ion-label>
           <b>Arriendo  {{arriendo.id_arr}}</b><br>   
           Hora de Inicio: {{arriendo.hora_inic}}<br>
@@ -19,5 +20,4 @@
         </ion-label>      
     </ion-item>
 </ion-list>
-<ion-note *ngIf="NotFound">No se han realizado arriendos en esta cuenta.</ion-note>
 </ion-content>

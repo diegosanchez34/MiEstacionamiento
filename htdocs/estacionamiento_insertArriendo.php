@@ -11,8 +11,10 @@ if($_SERVER['REQUEST_METHOD'] === "POST"){
         $hora_fin = $postData["hora_fin"];
         $patente = $postData["patente"];
         $id_est = $postData["id_est"];
+        $run_cli = $postData["run_cli"];
+        $run_due = $postData["run_due"];
 
-        $query = "INSERT INTO ARRIENDO(id_arr, hora_inic, hora_fin, patente, id_est) VALUES ('$id_arr','$hora_inic','$hora_fin','$patente','$id_est')";
+        $query = "INSERT INTO ARRIENDO(id_arr, hora_inic, hora_fin, patente, id_est, run_cli, run_due) VALUES ('$id_arr','$hora_inic','$hora_fin','$patente','$id_est','$run_cli','$run_due')";
 
         if(mysqli_query($conn, $query)){
             echo "Data inserted successfully";
