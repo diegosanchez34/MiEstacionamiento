@@ -7,8 +7,8 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="light">
-  <ion-card *ngFor="let vehiculo of vehiculos; let i = index">
+<ion-content [fullscreen]="true" color="light" class="ion-padding">
+  <ion-card *ngFor="let vehiculo of vehi; let i = index">
     <ion-card-header>
       <ion-card-title class="titulo">Vehículo {{i+1}}</ion-card-title>
     </ion-card-header>
@@ -18,6 +18,9 @@
       Patente: {{vehiculo.patente}}<br>
     </ion-card-content>
   </ion-card> 
+
+  <ion-note *ngIf="NotFound">No posee un vehiculo en esta cuenta.</ion-note>
+ 
 
   <ion-button href="/vehiculos" expand="block" class="ion-padding">Agregar un vehículo</ion-button> 
 

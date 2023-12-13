@@ -31,7 +31,9 @@ export class LoginPage implements OnInit {
     this.http.get(this.duenoURL).subscribe((respuesta:any)=>{this.duenos = respuesta});
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    localStorage.setItem('usuario',' ')
+  }
 
   ojito(){
     this.hide = !this.hide;
@@ -103,6 +105,9 @@ export class LoginPage implements OnInit {
       buttons: ['Aceptar']
     });
     await alert.present();
+  }
+
+  ionViewWillEnter() {
   }
 
 }

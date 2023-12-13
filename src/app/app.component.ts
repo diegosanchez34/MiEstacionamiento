@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-root',
@@ -18,6 +20,28 @@ export class AppComponent {
     { title: 'Contáctanos', url: '/contactanos', icon: 'mail' }
   ];
   
-  constructor() {}
+  constructor(private router: Router,private alertController: AlertController) {}
+
+  async cerrar() {
+    const alert = await this.alertController.create({
+      header: 'Cerrar Sesión',
+      message: '¿Estás seguro de que desea cerrar su sesión?',
+      buttons: [
+        {
+          text: 'Cancelar',
+          handler: () => {
+            console.log('El usuario canceló');
+          },
+        },
+        {
+          text: 'Aceptar',
+          handler: () => {
+            this.router.navigate(['/login']); 
+          },
+        }        
+      ]
+    });
+    await alert.present();
+  }
 
 }
