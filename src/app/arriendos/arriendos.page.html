@@ -7,7 +7,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="light" >
+<ion-content [fullscreen]="true" color="light"  class="ion-padding">
   <ion-list  [inset]="true">
     <ion-item *ngFor="let arriendo of arriendos">
         <ion-label>
@@ -19,4 +19,5 @@
         </ion-label>      
     </ion-item>
 </ion-list>
+<ion-note *ngIf="NotFound">No se han realizado arriendos en esta cuenta.</ion-note>
 </ion-content>

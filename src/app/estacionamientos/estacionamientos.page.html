@@ -7,9 +7,9 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="light">
+<ion-content [fullscreen]="true" color="light" class="ion-padding">
 
-  <ion-card  *ngFor="let estacionamiento of estacionamientos">
+  <ion-card  *ngFor="let estacionamiento of esta">
     <ion-card-header>
       <ion-card-title class="titulo">Estacionamiento {{estacionamiento.id_est}}</ion-card-title>
     </ion-card-header>
@@ -18,6 +18,8 @@
         Valor Hora: ${{estacionamiento.tarifa}}
     </ion-card-content>
   </ion-card> 
+
+  <ion-note *ngIf="NotFound">No posee un estacionamiento en esta cuenta.</ion-note>
 
   <ion-button href="/estacionamientos" expand="block" class="ion-padding">Agregar un estacionamiento</ion-button> 
   
